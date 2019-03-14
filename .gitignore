@@ -4,8 +4,6 @@
 !gulpfile.js
 !package.json
 
-!wp-content/themes/instasistas
-
 # ignore all files starting with . or ~
 .*
 ~*
