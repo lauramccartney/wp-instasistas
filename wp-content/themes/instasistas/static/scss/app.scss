@@ -6,6 +6,8 @@ $silk: #dcd0c0;
 $gold: #c0b283;
 
 $main-font-family: 'Open Sans', sans-serif;
+$section-border: 1px solid $gold;
+$large-margin: 6rem;
 
 @import 'partials/normalize',
         'partials/main',

@@ -18,6 +18,22 @@ a {
   margin: 0 auto;
 }
 
+.content-section {
+  margin: $large-margin auto;
+  padding: 5rem 0;
+  border-bottom: $section-border;
+  border-top: $section-border;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  font-weight: 300;
+
+  p {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+  }
+}
+
 .screen-reader-text {
   display: none;
 }
@@ -29,4 +45,17 @@ figcaption {
   position: absolute;
   bottom: 5px;
   right: 5px;
+}
+
+.cta-link {
+  text-align: center;
+  color: $gold;
+  font-weight: normal;
+  margin-top: 1rem;
+  display: block;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $black;
+  }
 }

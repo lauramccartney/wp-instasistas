@@ -8,16 +8,20 @@
 					{{post.thumbnail.caption}}
 				</figcaption>
       </div>
-			<section class="wrapper">
+
+			<section class="wrapper content-section">
 
 					{{post.content}}
 
+					<a class="cta-link" href="{{ function('get_permalink', 9) }}">See latest events ></a>
 			</section>
 
       <section class="wrapper social-feed">
       {{ function(
           'do_shortcode',
-          '[instagram-feed num=3 cols=3 showbutton=false]') }}
+          '[instagram-feed num=5 cols=5 showbutton=false showheader=false showfollow=false]') }}
+
+					<a class="cta-link" href="https://www.instagram.com/instasistas">Follow Instasistas ></a>
       </section>
 
 		</article>

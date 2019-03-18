@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  margin: 4rem auto;
+}
+
+.nav-main {
+  flex-grow: 1;
+}
+
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: .04em;
+  line-height: 0.8;
+
+  &::after {
+    content: 'Inspiring women, inspiring women';
+    font-family:  $main-font-family;
+    font-size: .93rem;
+    display: block;
+    letter-spacing: .05em;
+    margin-top: .5rem;
+    font-weight: 300;
+  }
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0 0 0 1em;
+  padding: 0;
+  height: 100%;
+
+  li {
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 0.1em;
+    text-align: right;
+    padding-left: 4em;
+
+    &:nth-child(n+2) {
+      a::before {
+        $dot-size: 5px;
+
+        content: '';
+        height: $dot-size;
+        width: $dot-size;
+        border-radius: 50%;
+        background-color: $gold;
+        position: absolute;
+        left: -2.3em;
+        top: 40%;
+      }
+    }
+  }
+}
+
+.menu-item {
+  a {
+    position: relative;
+
+    &::after {
+      content: '';
+      height: 1px;
+      background-color: $gold;
+
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      left: 0;
+    }
+  }
+}
