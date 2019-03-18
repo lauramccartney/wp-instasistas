@@ -1,0 +1,22 @@
+.hero-image {
+  position: relative;
+  background-image: none;
+  transition: background-image 1.5s linear;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2rem 0;
+  padding: 3rem 1rem;
+  min-height: 400px;
+
+  p {
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  a {
+    display: block;
+    color: $silk;
+  }
+}

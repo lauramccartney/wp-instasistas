@@ -17,8 +17,6 @@ var sassCompilePath = `${themePath}/static/scss/app.scss`;
 var sassWatchPath = `${themePath}/static/scss/**/*.scss`;
 var imgPath = `${themePath}/static/images/*/**`;
 
-console.log(sassWatchPath);
-
 gulp.task('scripts', function() {
     return gulp.src([
 			jsPath

@@ -1,0 +1,32 @@
+body {
+  font-family: $main-font-family;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  transition: .2s color linear;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+figcaption {
+  color: $white;
+  opacity: .8;
+  font-size: .8em;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}

@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+      <div class="hero-image" style="background-image:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)),url('{{ post.thumbnail.src }}')">
+				<figcaption>
+					{{post.thumbnail.caption}}
+				</figcaption>
+      </div>
+			<section class="wrapper">
+
+					{{post.content}}
+
+			</section>
+
+      <section class="wrapper social-feed">
+      {{ function(
+          'do_shortcode',
+          '[instagram-feed num=3 cols=3 showbutton=false]') }}
+      </section>
+
+		</article>
+{% endblock %}

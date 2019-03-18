@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300,400');
+
+$black: #373737;
+$white: #f4f4f4;
+$silk: #dcd0c0;
+$gold: #c0b283;
+
+$main-font-family: 'Open Sans', sans-serif;
+
+@import 'partials/normalize',
+        'partials/main',
+        'partials/home',
+        'partials/header',
+        'partials/footer';
