@@ -1,6 +1,26 @@
 footer {
   background-color: $black;
   color: $white;
-  padding: 1rem 0 3rem 0;
+  padding: 1rem 0 .5rem 0;
   margin-top: $large-margin;
+
+  a {
+    color: $silk;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: .7rem;
+  margin-top: 3rem;
+}
+
+.footer-form {
+  label {
+    margin-bottom: .5rem;
+  }
 }
