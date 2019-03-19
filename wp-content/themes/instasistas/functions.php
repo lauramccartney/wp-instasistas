@@ -63,6 +63,7 @@ class StarterSite extends Timber\Site {
 		$context['menu'] = new Timber\Menu('Main Navigation');
 		$context['footerMenu'] = new Timber\Menu('Footer Menu');
 		$context['socialLinks'] = new Timber\Menu('Social Links');
+		$context['locations'] = Timber::get_posts('post_type=event_locations');
 		$context['site'] = $this;
 		return $context;
 	}
