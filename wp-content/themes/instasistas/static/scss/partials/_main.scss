@@ -20,18 +20,44 @@ a {
 }
 
 .content-section {
-  margin: $large-margin auto;
-  padding: 5rem $lr-padding;
-  border-bottom: $section-border;
-  border-top: $section-border;
+  position: relative;
+  margin: $small-margin auto;
+  padding: $small-margin $lr-padding;
   font-size: 1.3rem;
   line-height: 1.4;
   font-weight: 300;
+
+  @media (min-width: $sm-breakpoint) {
+    margin: $large-margin auto;
+    padding: 5rem $lr-padding;
+  }
 
   p {
     max-width: 900px;
     margin: 0 auto;
     padding-bottom: .5rem;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    left: 6rem;
+    right: 6rem;
+    height: 1px;
+    background-color: $gold;
+
+    @media (min-width: $sm-breakpoint) {
+      left: 12rem;
+      right: 12rem;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
   }
 }
 
