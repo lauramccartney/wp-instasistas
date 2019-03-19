@@ -13,6 +13,44 @@ a {
   }
 }
 
+p {
+  padding-bottom: .5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+
+  @media (min-width: $sm-breakpoint) {
+    font-size: 1.2rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.page-content {
+  p, h1, h2, h3, h4, h5, h6, ul {
+    max-width: 900px;
+    margin: 1rem auto;
+  }
+
+  blockquote {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    border-left: 2px solid $silk;
+  }
+
+  a {
+    color: $gold;
+    font-weight: normal;
+
+    &:hover {
+      color: $silk;
+    }
+  }
+}
+
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
@@ -23,19 +61,10 @@ a {
   position: relative;
   margin: $small-margin auto;
   padding: $small-margin $lr-padding;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  font-weight: 300;
 
   @media (min-width: $sm-breakpoint) {
     margin: $large-margin auto;
     padding: 5rem $lr-padding;
-  }
-
-  p {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-bottom: .5rem;
   }
 
   &::before, &::after {
