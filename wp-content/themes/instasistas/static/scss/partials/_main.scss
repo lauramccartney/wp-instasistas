@@ -48,15 +48,22 @@ figcaption {
   right: 5px;
 }
 
-.cta-link {
+.cta-wrapper {
   text-align: center;
-  color: $gold;
+}
+
+.cta-link {
+  display: inline-block;
   font-weight: normal;
   margin-top: 1rem;
-  display: block;
-  font-size: 1.2rem;
+  font-size: .9rem;
+  color: $black;
+  border: 2px solid $silk;
+  padding: .5rem;
+  transition: background-color .2s linear;
 
   &:hover {
+    background-color: $silk;
     color: $black;
   }
 }

@@ -3,25 +3,28 @@
 {% block content %}
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 
-      <div class="hero-image" style="background-image: url('{{ post.thumbnail.src }}')">
-				<figcaption>
-					{{post.thumbnail.caption}}
-				</figcaption>
-      </div>
-
 			<section class="wrapper content-section">
 
 					{{post.content}}
 
-					<a class="cta-link" href="{{ function('get_permalink', 9) }}">See latest events ></a>
+					<div class="cta-wrapper">
+						<a class="cta-link" href="{{ function('get_permalink', 9) }}">
+							See latest events
+						</a>
+					</div>
 			</section>
 
       <section class="wrapper social-feed">
       {{ function(
           'do_shortcode',
-          '[instagram-feed num=5 cols=5 showbutton=false showheader=false showfollow=false]') }}
+          '[instagram-feed num=15 cols=5 showbutton=false showheader=false showfollow=false]') }}
 
-					<a class="cta-link" href="https://www.instagram.com/instasistas">Follow Instasistas on Instagram ></a>
+					<div class="cta-wrapper">
+						<a class="cta-link" href="https://www.instagram.com/instasistas">
+
+							<span>Follow Instasistas on Instagram</span>
+						</a>
+					</div>
       </section>
 
 		</article>

@@ -1,6 +1,4 @@
 .header {
-  margin: 2.5rem auto;
-
   @media (min-width: $sm-breakpoint) {
     display: flex;
   }
@@ -22,15 +20,14 @@
   letter-spacing: .04em;
   line-height: 0.8;
 
-  &::after {
-    content: 'Inspiring women, inspiring women';
-    font-family:  $main-font-family;
-    font-size: .93rem;
-    display: block;
-    letter-spacing: .05em;
-    margin-top: .5rem;
-    font-weight: 300;
-  }
+}
+
+.tagline {
+  font-family:  $main-font-family;
+  font-size: .89rem;
+  display: block;
+  letter-spacing: .05em;
+  margin: .5rem 0 0 0;
 }
 
 .nav-list {

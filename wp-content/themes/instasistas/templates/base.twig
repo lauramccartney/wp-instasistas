@@ -8,16 +8,31 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header class="header wrapper" >
-			{% block header %}
-					<h1 class="logo" role="banner">
-						<a class="logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-			{% endblock %}
-		</header>
+
+			{% if fn('is_front_page') %}
+				<div class="hero-image" style="background-image: url('{{ post.thumbnail.src }}')">
+			{% endif %}
+
+			<header class="header wrapper" >
+				{% block header %}
+						<h1 class="logo" role="banner">
+							<a class="logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+							<p class="tagline">
+								Inspiring women, inspiring women
+							</p>
+						</h1>
+						<nav id="nav-main" class="nav-main" role="navigation">
+							{% include "menu.twig" with {'menu': menu.get_items} %}
+						</nav><!-- #nav -->
+				{% endblock %}
+			</header>
+
+			{% if fn('is_front_page') %}
+					<figcaption>
+						{{post.thumbnail.caption}}
+					</figcaption>
+				</div>
+			{% endif %}
 
 		<section id="content" role="main">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
