@@ -1,10 +1,17 @@
 .header {
-  display: flex;
-  margin: 4rem auto;
+  margin: 2.5rem auto;
+
+  @media (min-width: $sm-breakpoint) {
+    display: flex;
+  }
 }
 
 .nav-main {
-  flex-grow: 1;
+  margin-top: 1.5rem;
+
+  @media (min-width: $sm-breakpoint) {
+    flex-grow: 1;
+  }
 }
 
 .logo {
@@ -28,23 +35,34 @@
 
 .nav-list {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-around;
   list-style: none;
-  margin: 0 0 0 1em;
   padding: 0;
   height: 100%;
+
+  @media (min-width: $sm-breakpoint) {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 0 0 1em;
+  }
 
   li {
     text-transform: uppercase;
     font-size: .9rem;
     letter-spacing: 0.1em;
-    text-align: right;
-    padding-left: 4em;
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: $sm-breakpoint) {
+      padding-left: 4em;
+      text-align: right;
+      width: auto;
+    }
 
     &:nth-child(n+2) {
       a {
         position: relative;
+        display: block;
 
         &::before {
           $dot-size: 5px;
@@ -55,8 +73,12 @@
           border-radius: 50%;
           background-color: $gold;
           position: absolute;
-          left: -2.3em;
+          left: -3px;
           top: 40%;
+
+          @media (min-width: $sm-breakpoint) {
+            left: -2.3em;
+          }
         }
       }
     }
