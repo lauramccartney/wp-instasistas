@@ -42,12 +42,7 @@ img {
   }
 
   a {
-    color: $gold;
-    font-weight: normal;
-
-    &:hover {
-      color: $silk;
-    }
+    @include inline-link();
   }
 }
 

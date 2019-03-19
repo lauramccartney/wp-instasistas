@@ -17,15 +17,26 @@ $silk: #dcd0c0;
 $gold: #c0b283;
 
 $main-font-family: 'Open Sans', sans-serif;
+$second-font-family: 'Abril Fatface', cursive;
 $section-border: 1px solid $gold;
 $small-margin: 3rem;
 $large-margin: 6rem;
 $lr-padding: 1rem;
 $sm-breakpoint: 768px;
 
+@mixin inline-link {
+  color: $gold;
+  font-weight: normal;
+
+  &:hover {
+    color: $silk;
+  }
+}
+
 @import 'partials/normalize',
         'partials/fonts',
         'partials/main',
         'partials/home',
         'partials/header',
-        'partials/footer';
+        'partials/footer',
+        'partials/posts';

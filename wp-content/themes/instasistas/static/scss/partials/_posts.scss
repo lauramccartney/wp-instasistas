@@ -1,0 +1,28 @@
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(19rem,1fr));
+  grid-gap: 1rem;
+}
+
+.tease {
+  h2 {
+    font-family: $second-font-family;
+    font-weight: normal;
+    letter-spacing: .04em;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .tease-location, p a {
+    font-size: .9rem;
+    @include inline-link();
+  }
+
+  .tease-image-wrapper {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
