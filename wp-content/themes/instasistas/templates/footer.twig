@@ -6,6 +6,14 @@
         '[mc4wp_form id="38"]') }}
   </div>
 
+  {% if footerMenu %}
+  	{% include 'footer-menu.twig' %}
+  {% endif %}
+
+  {% if socialLinks %}
+  	{% include 'social-links.twig' %}
+  {% endif %}
+
   <p class="copyright">
     Copyright {{"now"|date('Y')}} | Site by
     <a href="https://lauramccartney.github.io/portfolio/">Laura McCartney</a>

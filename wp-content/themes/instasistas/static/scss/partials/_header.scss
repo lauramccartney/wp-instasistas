@@ -43,35 +43,22 @@
     padding-left: 4em;
 
     &:nth-child(n+2) {
-      a::before {
-        $dot-size: 5px;
+      a {
+        position: relative;
 
-        content: '';
-        height: $dot-size;
-        width: $dot-size;
-        border-radius: 50%;
-        background-color: $gold;
-        position: absolute;
-        left: -2.3em;
-        top: 40%;
+        &::before {
+          $dot-size: 5px;
+
+          content: '';
+          height: $dot-size;
+          width: $dot-size;
+          border-radius: 50%;
+          background-color: $gold;
+          position: absolute;
+          left: -2.3em;
+          top: 40%;
+        }
       }
-    }
-  }
-}
-
-.menu-item {
-  a {
-    position: relative;
-
-    &::after {
-      content: '';
-      height: 1px;
-      background-color: $gold;
-
-      position: absolute;
-      bottom: -5px;
-      right: 0;
-      left: 0;
     }
   }
 }

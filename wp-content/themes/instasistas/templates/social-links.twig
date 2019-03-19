@@ -1,0 +1,7 @@
+<ul>
+  {% for link in socialLinks.items %}
+    <li>
+      <a target="{{ link.url }}" href="{{ link.url }}" class="icon-{{ link.title | lower }}"></a>
+    </li>
+  {% endfor %}
+</ul>

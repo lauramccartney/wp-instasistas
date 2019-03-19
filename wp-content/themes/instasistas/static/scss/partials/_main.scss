@@ -16,11 +16,12 @@ a {
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 $lr-padding;
 }
 
 .content-section {
   margin: $large-margin auto;
-  padding: 5rem 0;
+  padding: 5rem $lr-padding;
   border-bottom: $section-border;
   border-top: $section-border;
   font-size: 1.3rem;
