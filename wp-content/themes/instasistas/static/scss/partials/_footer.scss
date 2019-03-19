@@ -1,15 +1,21 @@
 footer {
   background-color: $black;
   color: $white;
-  padding: 1rem 0 .5rem 0;
+  padding: $small-margin 0 .5rem 0;
   margin-top: $large-margin;
 
   a {
-    color: $silk;
+    color: $white;
 
     &:hover {
-      color: $white;
+      color: $silk;
     }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -17,10 +23,96 @@ footer {
   text-align: center;
   font-size: .7rem;
   margin-top: 3rem;
+
+  a {
+    color: $silk;
+  }
 }
 
 .footer-form {
+  label, input {
+    font-size: .9rem;
+  }
+
   label {
-    margin-bottom: .5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 100%;
+    color: $black;
+    padding: .5rem;
+    border: none;
+  }
+
+  input[type=email] {
+    box-sizing: border-box;
+
+    &::placeholder {
+      opacity: .6;
+    }
+  }
+
+  input[type=submit] {
+    appearance: none;
+    background-color: $silk;
+    margin-top: .5rem;
+    border: 2px solid $silk;
+    color: $black;
+    transition: background-color .2s linear;
+    display: inline-block;
+
+    &:hover {
+      background-color: $black;
+      color: $silk;
+    }
+  }
+}
+
+.footer-container {
+  text-align: center;
+
+  @media (min-width: $sm-breakpoint) {
+    display: flex;
+    text-align: left;
+  }
+}
+
+.social-links {
+
+  @media (min-width: $sm-breakpoint) {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  li {
+    display: inline-block;
+    padding: 1rem 0;
+  }
+}
+
+.footer-menu {
+  flex-grow: 1;
+
+  li {
+    border-bottom: 1px solid $silk;
+    padding: .5rem 0;
+
+    @media (min-width: $sm-breakpoint) {
+      max-width: 250px;
+    }
+
+    &:nth-child(1) {
+      border-top: 1px solid $silk;
+    }
+  }
+}
+
+.footer-form, .footer-menu {
+  margin-bottom: 1rem;
+  
+  @media (min-width: $sm-breakpoint) {
+    margin: 0 1rem 1rem 0;
   }
 }

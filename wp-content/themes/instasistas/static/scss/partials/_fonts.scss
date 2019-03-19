@@ -11,6 +11,19 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: $silk;
+  color: $black;
+  border-radius: 50%;
+  padding: .5rem;
+  font-size: 1.1rem;
+  margin: 0 .3rem;
+  transition: background-color .2s linear;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
 }
 
 .icon-facebook:before {

@@ -1,7 +1,7 @@
 <ul class="footer-menu">
-{% for item in footerMenu.items %}
-  <li class="{{ item.classes | join(' ') }}">
-    <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-  </li>
-{% endfor %}
+  {% for item in footerMenu.items %}
+    <li class="{{ item.classes | join(' ') }}">
+      <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
 </ul>
