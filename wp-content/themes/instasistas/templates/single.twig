@@ -7,14 +7,18 @@
 	{% endif %}
 
 		<article class="wrapper post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<h1>{{ post.title }}</h1>
 
-			<section class="article-content">
-				<h1>{{ post.title }}</h1>
+			{% if post.meta('location') %}
 				{% include 'location-link.twig' %}
+			{% endif %}
 
-				<div class="page-content">
-					{{post.content}}
-				</div>
+			{% if post.meta('address') %}
+				{{ post.meta('address') }}
+			{% endif %}
+
+			<section class="page-content">
+				{{post.content}}
 			</section>
 
 		</article>

@@ -1,0 +1,14 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+	<h2><a href="{{post.link}}">{{post.title}}</a></h2>
+	<span class="area">{{post.meta('area')}}</span>
+
+	{% if post.thumbnail.src %}
+		<div class="tease-image-wrapper" style="background-image: url('{{post.thumbnail.src}}')"></div>
+	{% endif %}
+
+		<p>{{post.preview.length(25)}}</p>
+
+
+{% endblock %}
