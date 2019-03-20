@@ -1,0 +1,73 @@
+
+.post-type-page {
+  .signup-form {
+    text-align: center;
+    max-width: 400px;
+    padding: 1rem 2rem;
+
+    input[type=email] {
+      border: 2px solid $silk;
+    }
+
+    input[type=submit] {
+      &:hover {
+        background-color: white;
+      }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+
+      @media (min-width: $sm-breakpoint) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+
+.signup-form {
+  label, input {
+    font-size: .9rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 100%;
+    color: $black;
+    padding: .5rem;
+    border: none;
+    font-family: $main-font-family;
+  }
+
+  input[type=email] {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.4;
+
+    &::placeholder {
+      opacity: .6;
+    }
+  }
+
+  input[type=submit] {
+    appearance: none;
+    background-color: $silk;
+    margin-top: .5rem;
+    border: 2px solid $silk;
+    color: $black;
+    transition: background-color .2s linear;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+
+    &:hover {
+      background-color: $black;
+      color: $silk;
+    }
+  }
+}

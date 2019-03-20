@@ -3,9 +3,7 @@
 {% block content %}
 	<h2><a href="{{post.link}}">{{post.title}}</a></h2>
 
-	<a class="tease-location" href="{{ post.meta('location').link }}">
-		{{ post.meta('location').name }} - {{ post.meta('location').area }}
-	</a>
+	{% include 'location-link.twig' %}
 
 		<p>{{post.preview.length(25)}}</p>
 		{% if post.thumbnail.src %}

@@ -2,17 +2,20 @@
 
 {% block content %}
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="wrapper">
+
+			<section class="signup-form wrapper">
+				<h1>Sign up for the instasistas newsletter</h1>
+			{{ function(
+					'do_shortcode',
+					'[mc4wp_form id="38"]') }}
+
+			</section>
+
+			<section class="wrapper page-content">
 
 					{{post.content}}
 
 			</section>
-			<section class="signup-form wrapper">
 
-			{{ function(
-					'do_shortcode',
-					'[mc4wp_form id="38"]') }}
-					
-			</section>
 		</article>
 {% endblock %}

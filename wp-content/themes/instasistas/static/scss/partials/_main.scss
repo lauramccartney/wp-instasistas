@@ -4,13 +4,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: $black;
-  transition: .2s color linear;
-
-  &:hover {
-    color: $gold;
-  }
+  @include inline-link();
 }
 
 p {
@@ -28,6 +22,17 @@ img {
   width: 100%;
 }
 
+h1 {
+  font-family: $second-font-family;
+  font-weight: normal;
+  letter-spacing: .04em;
+  margin-bottom: .5rem;
+}
+
+time {
+  font-size: .8rem;
+}
+
 .page-content {
   p, h1, h2, h3, h4, h5, h6, ul {
     max-width: 900px;
@@ -40,49 +45,12 @@ img {
     padding: 0 1rem;
     border-left: 2px solid $silk;
   }
-
-  a {
-    @include inline-link();
-  }
 }
 
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 $lr-padding;
-}
-
-.content-section {
-  position: relative;
-  margin: $small-margin auto;
-  padding: $small-margin $lr-padding;
-
-  @media (min-width: $sm-breakpoint) {
-    margin: $large-margin auto;
-    padding: 5rem $lr-padding;
-  }
-
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    left: 6rem;
-    right: 6rem;
-    height: 1px;
-    background-color: $gold;
-
-    @media (min-width: $sm-breakpoint) {
-      left: 12rem;
-      right: 12rem;
-    }
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
-  }
 }
 
 .screen-reader-text {

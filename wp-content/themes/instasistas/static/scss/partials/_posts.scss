@@ -11,11 +11,18 @@
     letter-spacing: .04em;
     font-size: 1.8rem;
     margin-bottom: 0;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $gold;
+      }
+    }
   }
 
-  .tease-location, p a {
+  .location-link, p a {
     font-size: .9rem;
-    @include inline-link();
   }
 
   .tease-image-wrapper {
@@ -25,4 +32,17 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.featured-image {
+  padding-bottom: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5rem;
+}
+
+.location-link, .date-time {
+  display: block;
+  margin-bottom: .3rem;
 }

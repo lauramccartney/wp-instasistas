@@ -29,47 +29,6 @@ footer {
   }
 }
 
-.footer-form {
-  label, input {
-    font-size: .9rem;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  input {
-    width: 100%;
-    color: $black;
-    padding: .5rem;
-    border: none;
-  }
-
-  input[type=email] {
-    box-sizing: border-box;
-
-    &::placeholder {
-      opacity: .6;
-    }
-  }
-
-  input[type=submit] {
-    appearance: none;
-    background-color: $silk;
-    margin-top: .5rem;
-    border: 2px solid $silk;
-    color: $black;
-    transition: background-color .2s linear;
-    display: inline-block;
-
-    &:hover {
-      background-color: $black;
-      color: $silk;
-    }
-  }
-}
-
 .footer-container {
   text-align: center;
 
@@ -111,8 +70,8 @@ footer {
 
 .footer-form, .footer-menu {
   margin-bottom: 1rem;
-  
+
   @media (min-width: $sm-breakpoint) {
-    margin: 0 1rem 1rem 0;
+    margin: 0 2rem 1rem 0;
   }
 }

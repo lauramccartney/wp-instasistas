@@ -25,8 +25,10 @@ $lr-padding: 1rem;
 $sm-breakpoint: 768px;
 
 @mixin inline-link {
+  text-decoration: none;
   color: $gold;
   font-weight: normal;
+  transition: color .2s linear;
 
   &:hover {
     color: $silk;
@@ -39,4 +41,5 @@ $sm-breakpoint: 768px;
         'partials/home',
         'partials/header',
         'partials/footer',
-        'partials/posts';
+        'partials/posts',
+        'partials/forms';
