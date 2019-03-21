@@ -44,8 +44,13 @@
       background-color: $gold;
 
       @media (min-width: $sm-breakpoint) {
-        left: 12rem;
-        right: 12rem;
+        left: 16rem;
+        right: 16rem;
+      }
+
+      @media (min-width: 950px) {
+        left: 20rem;
+        right: 20rem;
       }
     }
 

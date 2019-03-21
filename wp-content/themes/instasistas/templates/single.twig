@@ -14,12 +14,22 @@
 			{% endif %}
 
 			{% if post.meta('address') %}
-				{{ post.meta('address') }}
+				<span class="address">
+					{{ post.meta('address') }}
+				</span>
 			{% endif %}
 
 			<section class="page-content">
+
 				{{post.content}}
 			</section>
 
 		</article>
+
+		{% if post.meta('map') %}
+			<section class="location-map">
+				{{ post.meta('map') }}
+			</section>
+		{% endif %}
+
 {% endblock %}
