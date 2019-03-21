@@ -1,4 +1,49 @@
 
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+
+input, textarea {
+  width: 100%;
+  color: $black;
+  padding: .5rem;
+  border: none;
+  font-family: $main-font-family;
+  border: 2px solid $silk;
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 1.4;
+
+  &::placeholder {
+    opacity: .6;
+  }
+}
+
+input[type=submit] {
+  appearance: none;
+  background-color: $silk;
+  margin-top: .5rem;
+  border: 2px solid $silk;
+  color: $black;
+  transition: background-color .2s linear;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1rem;
+  font-weight: normal;
+
+  &:hover {
+    background-color: white;
+    color: $black;
+  }
+}
+
+input[type=text], input[type=email], textarea {
+  font-size: 1.2rem;
+}
+
 .post-type-page {
   .signup-form {
     text-align: center;
@@ -25,46 +70,12 @@
   }
 }
 
-.signup-form {
-  label, input {
-    font-size: .9rem;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
+footer {
   input {
-    width: 100%;
-    color: $black;
-    padding: .5rem;
     border: none;
-    font-family: $main-font-family;
-  }
-
-  input[type=email] {
-    box-sizing: border-box;
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.4;
-
-    &::placeholder {
-      opacity: .6;
-    }
   }
 
   input[type=submit] {
-    appearance: none;
-    background-color: $silk;
-    margin-top: .5rem;
-    border: 2px solid $silk;
-    color: $black;
-    transition: background-color .2s linear;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-
     &:hover {
       background-color: $black;
       color: $silk;

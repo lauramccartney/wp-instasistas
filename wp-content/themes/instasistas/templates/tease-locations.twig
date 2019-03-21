@@ -7,8 +7,11 @@
 	{% if post.thumbnail.src %}
 		<div class="tease-image-wrapper" style="background-image: url('{{post.thumbnail.src}}')"></div>
 	{% endif %}
-
+	
+	<section class="page-content">
 		<p>{{post.preview.length(25)}}</p>
+	</section>
+
 
 
 {% endblock %}
