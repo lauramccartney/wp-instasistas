@@ -22,6 +22,16 @@
 			<section class="page-content">
 
 				{{post.content}}
+
+				{% if post.meta('ticket_tailor_shortcode') %}
+					{% set findUrl = post.meta('ticket_tailor_shortcode') | split("'") %}
+					{% set url = findUrl[1] %}
+					{% set shortcode = '[tt-event url="'~ url ~'" minimal="true" bg_fill="false" show_logo="false"]' %}
+
+					{{ function(
+		          'do_shortcode',
+		          shortcode) }}
+				{% endif %}
 			</section>
 
 		</article>
