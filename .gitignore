@@ -3,6 +3,7 @@
 !wp-content/
 !gulpfile.js
 !package.json
+wp-content/uploads
 
 # ignore all files starting with . or ~
 .*
