@@ -13,8 +13,9 @@
  * @since   Timber 0.1
  */
 
+$args = 'category_name=active';
 $context = Timber::get_context();
-$context['posts'] = new Timber\PostQuery();
+$context['posts'] = new Timber\PostQuery($args);
 $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
